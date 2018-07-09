@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": ["airbnb-base", "plugin:vue/recommended"],
+  "extends": ["airbnb-base", "plugin:vue/essential"],
   "plugins": ["vue"],
   "rules": {
     // 强制使用2个空格
