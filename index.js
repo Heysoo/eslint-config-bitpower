@@ -19,7 +19,7 @@ module.exports = {
     // 要求关键字前有空格
     "keyword-spacing": "warn",
     // 推荐使用字符串模板代替普通字符串变量连接
-    "prefer-template": "off",
+    "prefer-template": "warn",
     // 要求在全局作用域进行 require
     "global-require": "warn",
     // 强制即使是单行逻辑也使用花括号
@@ -29,7 +29,10 @@ module.exports = {
     // 要求块作用域花括号前有空格
     "space-before-blocks": "warn",
     // 限制单行代码最大长度
-    "max-len": "warn",
+    "max-len": ["warn", {
+      "code": 150,
+      "ignoreComments": true,
+    }],
     // 属性冒号前后是否留空格
     "key-spacing": ["warn", {
       "beforeColon": false,
@@ -38,7 +41,9 @@ module.exports = {
     // 要求注释前有空格
     "spaced-comment": "off",
     // 声明前提前使用变量
-    "no-use-before-define": "error",
+    "no-use-before-define": ["warn", {
+      "functions": false,
+    }],
     // 禁止对函数参数重赋值
     "no-param-reassign": "warn",
     // 要求匿名函数也要有名称
@@ -62,7 +67,7 @@ module.exports = {
     "import/extensions": "off",
     // 不允许动态 require
     "import/no-dynamic-require": "off",
-    // 优先使用export default
+    // 优先使用 export default
     'import/prefer-default-export' : 'warn',
     // 函数参数括号前有空格
     "space-before-function-paren": "off",
@@ -71,7 +76,9 @@ module.exports = {
     // 对象花括号必须留空格
     "object-curly-spacing": "warn",
     // 不允许多个空格留白
-    "no-multi-spaces": "warn",
+    "no-multi-spaces": ["warn", {
+      "ignoreEOLComments": true,
+    }],
     // 推荐使用解构赋值
     "prefer-destructuring": "warn",
     // 提交的代码不允许有 debugger
@@ -94,17 +101,17 @@ module.exports = {
     // 强制对象花括号换行
     "object-curly-newline": "warn",
     // 强制将对象的属性放在不同的行上
-    'object-property-newline': ['off'],
+    'object-property-newline': "off",
     // 对象属性名推荐不使用引号
     'quote-props': 'warn',
     // 文件以空行结尾
     'eol-last': 'warn',
     // 不允许写 console
-    'no-console': 'warn',
+    'no-console': 'off',
     // 不允许短路表达式
     'no-unused-expressions': 'off',
-    // 强制尽可能地使用点号
-    'dot-notation': 'warn',
+    // 推荐尽可能地使用点号引用对象属性
+    'dot-notation': 'off',
     // 要求 switch 语句中有 default 分支
     'default-case': 'warn',
     // ==== vue 相关 ====

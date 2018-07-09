@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bitpower",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Eslint Config for Bitpower",
   "main": "index.js",
   "scripts": {
