@@ -1,5 +1,6 @@
 module.exports = {
-  "extends": "airbnb-base",
+  "extends": ["airbnb-base", "plugin:vue/recommended"],
+  "plugins": ["vue"],
   "rules": {
     // 强制使用2个空格
     "indent": ["error", 2, {
@@ -114,8 +115,22 @@ module.exports = {
     'dot-notation': 'off',
     // 要求 switch 语句中有 default 分支
     'default-case': 'warn',
+    // 行末尾不允许有多余的空格
+    "no-trailing-spaces": 'warn',
     // ==== vue 相关 ====
     "vue/valid-v-if": "error",
     "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
-  }
+  },
+  overrides: [
+    // 解决 vue 单文件 script 的代码缩进问题
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off",
+        "vue/script-indent": ["error", 2, {
+          "baseIndent": 1,
+        }],
+      },
+    },
+  ],
 };

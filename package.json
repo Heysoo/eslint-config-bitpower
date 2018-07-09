@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bitpower",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Eslint Config for Bitpower",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Hisheng",
   "license": "MIT",
   "dependencies": {
-    "eslint-config-airbnb-base": "^12.0.0"
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-vue": "^4.5.0"
   }
 }
