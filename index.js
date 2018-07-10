@@ -69,7 +69,7 @@ module.exports = {
     // 不允许动态 require
     "import/no-dynamic-require": "off",
     // 优先使用 export default
-    'import/prefer-default-export' : 'warn',
+    'import/prefer-default-export' : 'off',
     // 函数参数括号前有空格
     "space-before-function-paren": "off",
     // 箭头函数参数必须带圆括号
@@ -117,6 +117,9 @@ module.exports = {
     'default-case': 'warn',
     // 行末尾不允许有多余的空格
     "no-trailing-spaces": 'warn',
+    // 要求函数必须要有返回值
+    "consistent-return": "off",
+    "no-self-compare": "off",
     // ==== vue 相关 ====
     "vue/valid-v-if": "error",
     "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
@@ -129,6 +132,7 @@ module.exports = {
         "indent": "off",
         "vue/script-indent": ["error", 2, {
           "baseIndent": 1,
+          "switchCase": 1,
         }],
       },
     },
