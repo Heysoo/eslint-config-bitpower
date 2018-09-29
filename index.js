@@ -20,7 +20,7 @@ module.exports = {
     // 要求关键字前有空格
     "keyword-spacing": "warn",
     // 推荐使用字符串模板代替普通字符串变量连接
-    "prefer-template": "warn",
+    "prefer-template": "off",
     // 要求在全局作用域进行 require
     "global-require": "warn",
     // 强制即使是单行逻辑也使用花括号
@@ -100,13 +100,13 @@ module.exports = {
     // 对象简写
     "object-shorthand": "warn",
     // 强制对象花括号换行
-    "object-curly-newline": "warn",
+    "object-curly-newline": "off",
     // 强制将对象的属性放在不同的行上
     'object-property-newline': "off",
     // 对象属性名推荐不使用引号
     'quote-props': 'warn',
     // 文件以空行结尾
-    'eol-last': 'warn',
+    'eol-last': 'off',
     // 不允许写 console
     'no-console': 'off',
     // 不允许短路表达式
@@ -118,8 +118,9 @@ module.exports = {
     // 行末尾不允许有多余的空格
     "no-trailing-spaces": 'warn',
     // 要求函数必须要有返回值
-    "consistent-return": "off",
+    "consistent-return": "warn",
     "no-self-compare": "off",
+    "no-continue": "warn",
     // ==== vue 相关 ====
     "vue/valid-v-if": "error",
     "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
