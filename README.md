@@ -1,5 +1,5 @@
 ## 介绍
-Bitpower（数字动能）前端 Javascript 及 Vue 编码规范
+ESLint Config for Bitpower
 
 ## 使用
 `npm i eslint --sav-dev`
