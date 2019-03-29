@@ -80,8 +80,19 @@ module.exports = {
     "no-multi-spaces": ["warn", {
       "ignoreEOLComments": true,
     }],
-    // 推荐使用解构赋值
-    "prefer-destructuring": "warn",
+    // 数组、对象解构赋值设置
+    "prefer-destructuring": ["warn", {
+      "VariableDeclarator": {
+        "array": true,
+        "object": true
+      },
+      "AssignmentExpression": {
+        "array": false,
+        "object": true
+      }
+    }, {
+      "enforceForRenamedProperties": false
+    }],
     // 提交的代码不允许有 debugger
     "no-debugger": "error",
     "no-lonely-if": "off",
@@ -124,6 +135,8 @@ module.exports = {
     // ==== vue 相关 ====
     "vue/valid-v-if": "error",
     "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }],
+    // 不允许链接地址 javascript:; 和 javascript:void(0); 的形式
+    "no-script-url": "warn",
   },
   overrides: [
     // 解决 vue 单文件 script 的代码缩进问题
